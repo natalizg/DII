@@ -1,0 +1,170 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+.top-nav-bar{
+    display:flex;
+    background-color: #333;
+    padding:10px;
+}
+.datos-izq{
+    margin-left:5%;
+    margin-right: 60%;
+    color:white;
+}
+
+.datos-der a{
+    text-decoration: none;
+    color:white;
+    margin-right:10px;
+}
+
+.parte-izq{
+    margin-top:10px;
+    display:flex;
+}
+.logo-izq{
+    margin-top:8px;
+}
+
+.menu ul{
+    display:flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    margin: 0px 300px;
+}
+
+.menu{
+    margin-top:30px;
+}
+li a{
+    color: #087021;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: underline;
+}
+li{
+    margin:10px;
+}
+
+.buscador{
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    padding: 25px 50px 30px 50px;
+    border-radius: 3.2px;
+    background-color: rgba(255,255,255,.85);
+    width: 800px;
+    font-weight: bold;
+    }
+
+
+.buscador-search input{
+    padding:10px;
+    border:1px solid #ddd;
+    outline:none;
+    border-radius: 5px;
+    font-size:16px;
+    width:720px;
+    border-color: #087021;
+    height:30px;
+}
+
+.buscador-search button{
+    padding:10px;
+    background-color:#087021;
+    border:none;
+    border-radius:5px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    height:50px;
+    width:50px;
+}
+
+.portada{
+    background-image: url(../images/fondo.jpg);
+    background-size: cover; /* Cubre completamente el área del div con la imagen */
+    background-position: center;
+    height: 650px;
+}
+
+
+.buscador-title{
+    margin-bottom:10px;
+}
+
+.caja{
+    border: 1px solid #ccc;
+    padding: 24px 15px 15px;
+    margin: 0 0.5rem;
+    width: 289px;
+    min-height: 20em;
+}
+
+.opciones li a{
+    display:block;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.opciones ul{
+    list-style-type: none;
+}
+
+.cajas{
+    display:flex;
+    justify-content: center;
+}
+
+h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color:#333;
+    margin-left: 270px;
+    font-size:xx-large;
+    margin-top:30px;  
+    margin-left:250px;
+}
+
+.caja h3{
+    color:#333;
+    margin-bottom: 15px;
+}
+hr{
+    margin-bottom:30px;
+}
+
+.menu img{
+    display:none;
+}
+
+
+
+  @media screen and (max-width: 1231px) {
+    
+    .menu ul {
+      display: none;
+    }
+  
+    .menu img {
+      cursor: pointer;
+      display:block;
+    }
+  }
