@@ -5,15 +5,24 @@
     font-family: sans-serif;
     line-height: 1.15;
 }
+
+/* PARTE DE ARRIBA */
+
 .top-nav-bar{
     display:flex;
     background-color: #333;
     padding:10px;
 }
 .datos-izq{
-    margin-left:5%;
-    margin-right: 60%;
+    margin-right: auto;
+    margin-left:100px;
     color:white;
+    justify-content: left;
+}
+.datos-der{
+    margin-right:100px;
+    margin-left:auto;
+    justify-content: right;
 }
 
 .datos-der a{
@@ -22,13 +31,44 @@
     margin-right:10px;
 }
 
-.parte-izq{
-    margin-top:10px;
-    display:flex;
+/* NAV */
+
+nav{
+    padding-top:5px;
+    padding-bottom:5px;
 }
+
+.contenedor-nav{
+    display:flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.parte-izq{
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .logo-izq{
     margin-top:8px;
 }
+
+.menu{
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.menu img{
+    display:none;
+}
+
 
 .menu ul{
     display:flex;
@@ -37,27 +77,29 @@
     padding: 0;
 }
 
-/* Nav  */
-nav{
-    display:flex;
-    justify-content: space-between;
-    margin: 0px 300px;
+li{
+    margin:10px;
 }
 
-.menu{
-    margin-top:30px;
-}
 li a{
     color: #087021;
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
 }
+
 a:hover{
     text-decoration: underline;
 }
-li{
-    margin:10px;
+
+
+/* PORTADA Y BUSCADOR */
+
+.portada{
+    background-image: url(../images/fondo.jpg);
+    background-size: cover; /* Cubre completamente el área del div con la imagen */
+    background-position: center;
+    height: 650px;
 }
 
 .buscador{
@@ -99,16 +141,43 @@ li{
     width:50px;
 }
 
-.portada{
-    background-image: url(../images/fondo.jpg);
-    background-size: cover; /* Cubre completamente el área del div con la imagen */
-    background-position: center;
-    height: 650px;
-}
 
 
 .buscador-title{
     margin-bottom:10px;
+}
+
+/* TITULO DIRECTO A */
+
+.directo{
+    display:flex;
+}
+.hueco{
+    width:80%;
+}
+.directo h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color:#333;
+    margin-left:auto;
+    font-size:xx-large;
+}
+/*
+h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color:#333;
+    margin-left: 270px;
+    font-size:xx-large; 
+    margin-left:250px;
+}
+*/
+
+
+/* CAJAS */
+.cajas{
+    display:flex;
+    justify-content: center;
 }
 
 .caja{
@@ -129,43 +198,97 @@ li{
     list-style-type: none;
 }
 
-.cajas{
-    display:flex;
-    justify-content: center;
-}
-
-h2{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color:#333;
-    margin-left: 270px;
-    font-size:xx-large;
-    margin-top:30px;  
-    margin-left:250px;
-}
 
 .caja h3{
     color:#333;
     margin-bottom: 15px;
 }
+
 hr{
     margin-bottom:30px;
 }
 
-.menu img{
-    display:none;
-}
-
-
-
-  @media screen and (max-width: 1231px) {
+@media (max-width: 1250px) {
     
-    .menu ul {
-      display: none;
+    .menu li{
+        margin:6px;
+    }
+    .menu li a {
+      font-size: 12px;
     }
   
-    .menu img {
-      cursor: pointer;
-      display:block;
+    .logo-izq img {
+      width: 40px; 
+    }
+    .logo-izq-2{
+        margin-top:5px;
+    }
+    .logo-izq-2 img{
+        width: 200px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .menu li{
+        display:none;
+
+    }
+
+    .menu img{
+        display:block;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .datos-der{
+        margin-right:0;
+        font-size: 13px;
+    }
+
+    .datos-izq{
+        margin-left:0;
+        font-size: 13px;
+    }
+    .contenedor-nav{
+        padding:0;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .buscador{
+        width: 400px;
+    }
+
+    .buscador-search input{
+        width:300px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .buscador{
+        width: 200px;
+        margin:0;
+    }
+
+    .buscador-search input{
+        width:120px;
+        height:20px;
+    }
+
+    .buscador-search button{
+        height:43px;
+        width:43px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .cajas{
+        flex-direction:column;
+        align-items: center;
+    }
+  }
+  @media (max-width: 930px) {
+    .directo h2{
+        margin-left: 30px;
     }
   }
